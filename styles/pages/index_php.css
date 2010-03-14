@@ -1,0 +1,7 @@
+@import url('../layout.css');
+@import url('../styles.css');
+
+#connections > div, #catalog_table > div { float: left; width: 50%; }
+#same { font-size: .8em; font-weight: normal; }
+
+.field label { width: 150px; }

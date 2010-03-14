@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+        <title>Data Migration</title>
+        <script type="text/javascript" src="scripts/jquery-1.4.2.js"></script>
+        <script type="text/javascript" src="scripts/jquery-livequery.js"></script>
+        <script type="text/javascript" src="scripts/jquery-ghosttext.js"></script>
+        <script type="text/javascript" src="scripts/pages/index_php.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles/pages/index_php.css" />
+    </head>
+    <body>
+        <form action="setup.php" method="POST" autocomplete="off">
+            <div id="frame">
+                <h1>MySQL Data Migration</h1>
+                <hr />
+                <div id="connections">
+                    <h2>Database Connection Information</h2>
+                    <div>
+                        <h3>Source</h3>
+                        <div class="field">
+                            <label for="source_host">Host:</label>
+                            <input type="text" id="source_host" name="source_host" ghost="localhost" value="asdfasd" />
+                        </div>
+                        <div class="field">
+                            <label for="source_user">User:</label>
+                            <input type="text" id="source_user" name="source_user" ghost="username" />
+                        </div>
+                        <div class="field">
+                            <label for="source_password">Password:</label>
+                            <input type="text" id="source_password" name="source_password" ghost="password" />
+                            <a href="javascript: void();" id="source_connection_test">test connection</a>
+                        </div>
+                    </div>
+                    <div id="destination_connection_div">
+                        <h3>Destination <input type="checkbox" id="same_as_source" /> <span id="same">same as source?</span></h3>
+                        <div class="field">
+                            <label for="destination_host">Host:</label>
+                            <input type="text" id="destination_host" name="destination_host" ghost="localhost" />
+                        </div>
+                        <div class="field">
+                            <label for="destination_user">User:</label>
+                            <input type="text" id="destination_user" name="destination_user" ghost="username" />
+                        </div>
+                        <div class="field">
+                            <label for="destination_pass">Password:</label>
+                            <input type="text" id="destination_password" name="destination_password" ghost="password" />
+                            <a href="javascript: void();" id="destination_connection_test">test connection</a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <hr />
+                <div id="catalog_table">
+                    <h2>Catalog and Table</h2>
+                    <div>
+                        <h3>Source</h3>
+                        <div class="field">
+                            <label for="source_catalog">Catalog:</label>
+                            <select id="source_catalog" name="source_catalog"></select>
+                        </div>
+                        <div class="field">
+                            <label for="source_table">Table:</label>
+                            <select id="source_table" name="source_table"></select>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Destination</h3>
+                        <div class="field">
+                            <label for="destination_catalog">Catalog:</label>
+                            <select id="destination_catalog" name="destination_catalog"></select>
+                        </div>
+                        <div class="field">
+                            <label for="destination_table">Table:</label>
+                            <select id="destination_table" name="destination_table"></select>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <hr />
+                <div id="column_mapping">
+                    <h2>Map Columns</h2>
+                    <div class="info">
+                        <h3>Add mapping</h3>
+                        <select name="source_column"></select>
+                        maps to:
+                        <select name="destination_column"></select>
+                    </div>
+                    <div class="mappings">
+                        <h3>Mapped Columns</h3>
+                        <ul>
+                            <li><a href="">remove</a> id -&gt; id</li>
+                            <li><a href="">remove</a> title -&gt; product_title</li>
+                            <li><a href="">remove</a> description -&gt; product_desc</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr />
+            </div>
+        </form>
+    </body>
+</html>

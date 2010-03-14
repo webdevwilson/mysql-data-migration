@@ -1,0 +1,10 @@
+h1 { margin: 9px 0; }
+h2 { margin: 7px 0; }
+h3 { margin: 5px 0; }
+
+label { display: block; float: left; }
+
+#frame { width: 940px; padding: 10px; margin: 10px auto; }
+#frame > div { margin: 0 12px; }
+
+.clear { clear: both !important; width: 100% !important; float: none !important; }

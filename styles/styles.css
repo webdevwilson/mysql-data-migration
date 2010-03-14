@@ -1,0 +1,10 @@
+body { font-family: segoe UI, arial, verdana;
+       font-size: 72%; background-color: #f6f6f6; color: #0A3444; }
+a:link, a:visited { color: #0A3444; text-decoration: none; }
+a:hover { text-decoration: underline; }
+#frame { background-color: #BAE0D3; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
+
+hr { width: 97%; margin: 20px auto !important; border-width: 0px; border-top: 1px solid #0A3444; }
+
+label {  }
+
