@@ -8,3 +8,7 @@ label { display: block; float: left; }
 #frame > div { margin: 0 12px; }
 
 .clear { clear: both !important; width: 100% !important; float: none !important; }
+
+#connections > div, #catalog_table > div { float: left; width: 50%; }
+
+.field label { width: 150px; }
